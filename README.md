@@ -54,6 +54,8 @@ Beelink Mini PC | 32GB DDR4 RAM | 1TB SSD
 
 Zimablade X86 Single Board Server | 16GB DDR4 RAM | 1TB SSD
 
+### Workstation
+
 Razer Blade 15 | 32GB DDR4 RAM | 1TB SSD
 
 ## :rocket: Installed Apps & Tools
