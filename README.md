@@ -48,11 +48,6 @@ Following the diagram, this homelab includes:
         <td><a href="https://n8n.io/">n8n</a></td>
         <td>Secure, AI-native workflow automation</td>
     </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/wallabag-light.svg"></td>
-        <td><a href="https://wallabag.org/">Wallabag</a></td>
-        <td>Save articles & posts from the web for storage & reading later</td>
-    </tr>
 </table>
 
 ### **1. Hypervisor & Virtualization**
@@ -62,6 +57,24 @@ Following the diagram, this homelab includes:
 ### **2. Active Directory & Domain Services**
    - **Ubuntu Server 24 (Directory Services Server)**
    - **Domain Controller, DHCP, DNS, Group Policy Objects (GPO)**.
+
+<table>
+    <tr>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><img width="32" src="https://www.svgrepo.com/download/499807/home-page.svg"></td>
+        <td><a href="https://github.com/gethomepage/homepage">Homepage</a></td>
+        <td>My customized portal to my homelab & internet</td>
+    </tr>
+    <tr>
+        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"></td>
+        <td><a href="https://n8n.io/">n8n</a></td>
+        <td>Secure, AI-native workflow automation</td>
+    </tr>
+</table>
 
 ### **3. Security Tools & Monitoring**
    - **Wazuh SIEM** (on Beelink Mini PC) – Logs, threat detection, and monitoring.
@@ -73,6 +86,24 @@ Following the diagram, this homelab includes:
    - **Nessus / OpenVAS** – Vulnerability scanning.
    - **Metasploit Framework** – Penetration testing and exploitation.
    - **BloodHound / SharpHound** – Active Directory attack path analysis.
+
+<table>
+    <tr>
+        <th>Logo</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td><img width="32" src="https://www.svgrepo.com/download/499807/home-page.svg"></td>
+        <td><a href="https://github.com/gethomepage/homepage">Homepage</a></td>
+        <td>My customized portal to my homelab & internet</td>
+    </tr>
+    <tr>
+        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"></td>
+        <td><a href="https://n8n.io/">n8n</a></td>
+        <td>Secure, AI-native workflow automation</td>
+    </tr>
+</table>
 
 ### **5. Attack & Defense Simulation**
    - **Atomic Red Team** (on Razer Blade running Parrot OS) – Adversary emulation testing.
