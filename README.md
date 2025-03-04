@@ -70,11 +70,6 @@ End User Applications
         <th>Description</th>
     </tr>
     <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/commafeed.svg"></td>
-        <td><a href="https://www.commafeed.com/#/welcome">Commafeed</a></td>
-        <td>Bloat free RSS feed reader</td>
-    </tr>
-    <tr>
         <td><img width="32" src="https://www.svgrepo.com/download/499807/home-page.svg"></td>
         <td><a href="https://github.com/gethomepage/homepage">Homepage</a></td>
         <td>My customized portal to my homelab & internet</td>
