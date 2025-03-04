@@ -50,11 +50,11 @@ Following the diagram, this homelab includes:
     </tr>
 </table>
 
-### **1. Hypervisor & Virtualization**
+### **Hypervisor & Virtualization**
    - **VMware Workstation** (on Zimablade) – Virtual machine management.
    - **TrueNAS Scale** (on Synology NAS) – Storage solution for logs, backups, and VM storage.
 
-### **2. Active Directory & Domain Services**
+### **Active Directory & Domain Services**
    - **Ubuntu Server 24 (Directory Services Server)**
    - **Domain Controller, DHCP, DNS, Group Policy Objects (GPO)**.
 
@@ -76,13 +76,13 @@ Following the diagram, this homelab includes:
     </tr>
 </table>
 
-### **3. Security Tools & Monitoring**
+### **Security Tools & Monitoring**
    - **Wazuh SIEM** (on Beelink Mini PC) – Logs, threat detection, and monitoring.
    - **Elastic Stack (ELK)** – Visualization and log aggregation.
    - **Suricata / Zeek** – Network intrusion detection and analysis.
    - **Sysmon + Windows Event Logging** – Endpoint monitoring.
 
-### **4. Vulnerability & Exploitation**
+### **Vulnerability & Exploitation**
    - **Nessus / OpenVAS** – Vulnerability scanning.
    - **Metasploit Framework** – Penetration testing and exploitation.
    - **BloodHound / SharpHound** – Active Directory attack path analysis.
@@ -105,7 +105,7 @@ Following the diagram, this homelab includes:
     </tr>
 </table>
 
-### **5. Attack & Defense Simulation**
+### **Attack & Defense Simulation**
    - **Atomic Red Team** (on Razer Blade running Parrot OS) – Adversary emulation testing.
    - **C2 Frameworks** – Cobalt Strike, Sliver, or Mythic for Red Team exercises.
    - **Windows & Linux Workstations** – For attack testing, phishing simulations, and lateral movement.
