@@ -82,10 +82,10 @@ Following the diagram, this homelab includes:
 ## **Implementation Plan**
 
 ### **1. Network & Virtual Machine Deployment**
-- Set up **VMware Workstation** on the Razer Blade 15.
+- Set up **VMware Workstation** on the Zimablade.
 - Create virtual subnets for **internal enterprise, DMZ, and security zones**.
-- Deploy a **Windows Server VM** for **Active Directory**.
-- Deploy a **Linux VM** for **Wazuh SIEM and ELK Stack**.
+- Deploy a **Ubuntu Server VM** for **Active Directory**.
+- Deploy a **Linux TalosOS VM** for **Wazuh SIEM and ELK Stack**.
 
 ### **2. Security Monitoring & Logging**
 - Configure **Wazuh SIEM** to collect logs from Windows and Linux machines.
