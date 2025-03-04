@@ -16,7 +16,7 @@ This cybersecurity homelab is designed to replicate real-world enterprise networ
 |--------|-------|------|
 | **Beelink Mini PC** | 32GB DDR4 RAM, 1TB SSD | Security Server (SIEM, EDR, Vulnerability Scanner) |
 | **ZimaBlade X86 Single Board Server** | 16GB DDR4 RAM, 1TB SSD | Directory Services / Hypervisor |
-| **Razer Blade 15** | 32GB DDR4 RAM, 1TB SSD | Workstation for attack simulation lateral movement, and security operations | Running Parrot OS
+| **Razer Blade 15** | 32GB DDR4 RAM, 1TB SSD | Workstation for attack simulation and security operations | Running Parrot OS
 | **Synology DS923+ 4-Bay Diskstation NAS** | 16GB DDR4 RAM, 80TB HDD | Storage |
 
 ## **Network Architecture Overview**
