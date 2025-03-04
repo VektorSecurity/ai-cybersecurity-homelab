@@ -36,11 +36,11 @@ Following the diagram, this homelab includes:
     <tr>
         <th>Logo</th>
         <th>Name</th>
-        <th>Description</th>
+        <th>Hypervisor</th>
     </tr>
     <tr>
-        <td><img width="32" src="https://www.svgrepo.com/download/499807/home-page.svg"></td>
-        <td><a href="https://github.com/gethomepage/homepage">Homepage</a></td>
+        <td><img width="32" src="https://imgs.search.brave.com/I3zuH4XrMirJ_2EsXmJpKDjPnk_iNORLotYT0xQgqsA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWN1/cml0eS50cnVlbmFz/LmNvbS9pbWFnZXMv/TG9nb1RydWVOQVNT/Y2FsZS5wbmc"></td>
+        <td><a href="https://www.truenas.com/truenas-scale/">Homepage</a></td>
         <td>My customized portal to my homelab & internet</td>
     </tr>
     <tr>
