@@ -1,12 +1,6 @@
 # 🏠 Homelab
 ![Project Status](https://img.shields.io/badge/status-in%20development-orange)  
 
-Overview will go here...
-
-<https://hoytcybersecurity.com>
-
-More details here.
-
 ## **Objective**
 This cybersecurity homelab is designed to replicate real-world enterprise network environments, conduct security testing, and practice threat detection, incident response, and vulnerability management. The architecture follows a typical attack chain, simulating various security scenarios.
 
