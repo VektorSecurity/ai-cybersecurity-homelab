@@ -41,7 +41,7 @@ Following the diagram, this homelab includes:
     <tr>
         <td><img width="32" src="https://imgs.search.brave.com/I3zuH4XrMirJ_2EsXmJpKDjPnk_iNORLotYT0xQgqsA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWN1/cml0eS50cnVlbmFz/LmNvbS9pbWFnZXMv/TG9nb1RydWVOQVNT/Y2FsZS5wbmc"></td>
         <td><a href="https://www.truenas.com/truenas-scale/">TrueNAS Scale</a></td>
-        <td>Hypervisor</td>
+        <td>I'm using TrueNAS Scale as my Hypervisor for centralized storage, VM hosting, and backup management within my homelab infrastructure.</td>
     </tr>
 </table>
 
