@@ -16,7 +16,8 @@ This cybersecurity homelab is designed to replicate real-world enterprise networ
 | **Jetson Nano (4GB RAM, 128GB SSD)** | **Local AI** | Clustered with Mini PCs, integrates with all Proxmox-hosted VMs and security server for AI-driven threat detection, automation, and real-time attack analysis. |
 
 ## **Network Architecture Overview**
-Following the diagram, this homelab includes:
+![Cybersecurity Homelab Architecture](https://postimg.cc/bsB7sfY3)
+
 1. **Email Server (SMTP)** → Entry point for phishing and reconnaissance.
 2. **Hypervisor** → Hosts virtual machines to replicate enterprise systems.
 3. **Directory Services Server** → Represents Active Directory for user authentication, privilege escalation, and persistence testing.
