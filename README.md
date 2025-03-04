@@ -1,18 +1,17 @@
 # 🏠 Homelab
+![Project Status](https://img.shields.io/badge/status-in%20development-orange)  
 
-As featured on YouTube and in my private DevOps community.
+Overview will go here...
 
-Frequent updates with in-depth explanations are posted here:
+<https://hoytsybersecurity.com>
 
-<https://skool.com/kubecraft>
-
-You can also ask me questions directly when you join this community. I'm happy to mentor you on your homelab journey!
+More details here.
 
 ## Introduction
 
 This repo contains all of the configuration and documentation of my homelab.
 
-The purpose of my homelab is to learn and to have fun. Being a Cloud Native Engineer by trade, I work with Kubernetes every day, and my homelab is the place where I can try out and learn new things. On the other hand, by self-hosting some applications, it makes me feel responsible for the entire process of deploying and maintaining an application from A to Z. It forces me to think about backup strategies, security, scalability and the ease of deployment and maintenance.
+The purpose of my homelab is to learn and to...
 
 ## Cluster Provisioning & Architecture
 
