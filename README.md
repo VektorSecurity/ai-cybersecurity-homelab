@@ -7,62 +7,30 @@ Overview will go here...
 
 More details here.
 
-## Introduction
+## **Objective**
+This cybersecurity homelab is designed to replicate real-world enterprise network environments, conduct security testing, and practice threat detection, incident response, and vulnerability management. The architecture follows a typical attack chain, simulating various security scenarios.
 
-This repo contains all of the configuration and documentation of my homelab.
+## **Hardware Setup**
 
-The purpose of my homelab is to learn and to...
+| Device | Specs | Role |
+|--------|-------|------|
+| **Beelink Mini PC** | 32GB DDR4 RAM, 1TB SSD | Security Server (SIEM, EDR, Vulnerability Scanner) |
+| **ZimaBlade X86 Single Board Server** | 16GB DDR4 RAM, 1TB SSD | Directory Services / Hypervisor |
+| **Razer Blade 15** | 32GB DDR4 RAM, 1TB SSD | Workstation for attack simulation, lateral movement, and security operations |
 
-## Cluster Provisioning & Architecture
+## **Network Architecture Overview**
+Following the diagram, this homelab includes:
+1. **Email Server (SMTP)** → Entry point for phishing and reconnaissance.
+2. **Hypervisor** → Hosts virtual machines to replicate enterprise systems.
+3. **Directory Services Server** → Represents Active Directory for user authentication, privilege escalation, and persistence testing.
+4. **Security Server** → Centralized security monitoring with SIEM, EDR, and vulnerability scanning.
+5. **Workstations**:
+   - **Local AI Workstation** → Simulates a user machine, attack target.
+   - **Enterprise Workstation** → For lateral movement testing.
+   - **Security Workstation** → For defensive security operations.
 
-I use [Talos Linux](https://www.talos.dev/) to set up my machines. I prefer Talos because it is lightweight and minimal, and provides production grade security right out of the box. After running plain Talos for over a year, I switched to using [Sidero Omni](https://www.siderolabs.com/platform/saas-for-kubernetes/) to manage my Talos clusters. Omni allows me to freely add nodes and destroy them, scaling my clusters as desired.
+## **Software Stack**
 
-I am currently testing out a new architecture of single-node clusters where the workloads are scheduled on the control plane. A wise man taught me the phrase "no in-place upgrades", and I desire to move in that direction. Instead of one big cluster, I'm now running several. Omni makes this extremely easy.
-
-<table>
-    <tr>
-        <th>Number</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-    <td>1</td>
-    <td>Jotunheim</td>
-        <td>Contains all end-user applications. Stateless, fully provisioned from code. Can be torn down and spun up within minutes on different hardware.</td>
-    </tr>
-    <tr>
-        <td>2</td>
-    <td>Data</td>
-        <td>Contains all my databases & state. Multi-node. Can be fully restored from Blob storage.</td>
-    </tr>
-    <tr>
-        <td>3</td>
-    <td>Moria</td>
-        <td>Private cluster provisioned from private repository.</td>
-    </tr>
-</table>
-
-## :computer: Hardware
-
-### Nodes
-
-I use a combination of mini pc's, and a Zima Blade single board server for my nodes. The mini PC's are great because they are small yet powerful.
-
-Beelink Mini PC | 32GB DDR4 RAM | 1TB SSD
-
-Beelink Mini PC | 32GB DDR4 RAM | 1TB SSD
-
-Zimablade X86 Single Board Server | 16GB DDR4 RAM | 1TB SSD
-
-### Workstation
-
-Razer Blade 15 | 32GB DDR4 RAM | 1TB SSD
-
-## :rocket: Installed Apps & Tools
-
-### Apps
-
-End User Applications
 <table>
     <tr>
         <th>Logo</th>
@@ -86,71 +54,60 @@ End User Applications
     </tr>
 </table>
 
-### Infrastructure
+### **1. Hypervisor & Virtualization**
+   - **VMware Workstation** (on Razer Blade 15) – Virtual machine management.
+   - **TrueNAS Scale** (on ZimaBlade) – Storage solution for logs, backups, and VM storage.
 
-Everything needed to run my cluster & deploy my applications
-<table>
-    <tr>
-        <th>Logo</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/cert-manager.svg"></td>
-        <td><a href="https://cert-manager.io/">Cert Manager</a></td>
-        <td>X.509 certificate management for Kubernetes.</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/cilium.svg"></td>
-        <td><a href="https://cilium.io/">Cilium</a></td>
-        <td>My CNI of choice, used on all clusters. eBPF-based Networking, Observability, Security</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/cloudflare-zero-trust.png"></td>
-        <td><a href="https://developers.cloudflare.com/cloudflare-one/">Cloudflare Zero Trust</a></td>
-        <td>Used for private tunnels to expose public services (without requiring a public IP).</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/postgresql.svg"></td>
-        <td><a href="https://cloudnative-pg.io/">CloudNativePG</a></td>
-        <td>Database operator for running PostgreSQL clusters</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://www.svgrepo.com/download/530451/dns.svg"></td>
-        <td><a href="https://github.com/kubernetes-sigs/external-dns">External DNS</a></td>
-        <td>Synchronizes exposed Kubernetes Services and Ingresses with DNS providers.</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://www.svgrepo.com/download/477066/lock.svg"></td>
-        <td><a href="https://external-secrets.io/latest/">External Secrets Operator</a></td>
-        <td>Used to sync my secrets from Azure Key Vaults to my cluster</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/flux-cd.svg"></td>
-        <td><a href="https://fluxcd.io/">Flux CD</a></td>
-        <td>My GitOps solution of choice. Better than Argo.</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/grafana.svg"></td>
-        <td><a href="https://grafana.com/">Grafana</a></td>
-        <td>The open observability platform.</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/svg/prometheus.svg"></td>
-        <td><a href="https://prometheus.io/">Prometheus</a></td>
-        <td>An open-source monitoring system with a dimensional data model, flexible query language, efficient time series database and modern alerting approach.</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://www.svgrepo.com/download/374041/renovate.svg"></td>
-        <td><a href="https://github.com/renovatebot/renovate">Renovate</a></td>
-        <td>Automated dependency updates.</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/synology.svg"></td>
-        <td><a href="https://github.com/SynologyOpenSource/synology-csi">Synology CSI Driver</a></td>
-        <td>Used to provision Persistent Volumes directly on my Synology</td>
-    </tr>
-</table>
+### **2. Active Directory & Domain Services**
+   - **Windows Server 2022 (Directory Services Server)**
+   - **Domain Controller, DHCP, DNS, Group Policy Objects (GPO)**.
+
+### **3. Security Tools & Monitoring**
+   - **Wazuh SIEM** (on Beelink Mini PC) – Logs, threat detection, and monitoring.
+   - **Elastic Stack (ELK)** – Visualization and log aggregation.
+   - **Suricata / Zeek** – Network intrusion detection and analysis.
+   - **Sysmon + Windows Event Logging** – Endpoint monitoring.
+
+### **4. Vulnerability & Exploitation**
+   - **Nessus / OpenVAS** – Vulnerability scanning.
+   - **Metasploit Framework** – Penetration testing and exploitation.
+   - **BloodHound / SharpHound** – Active Directory attack path analysis.
+
+### **5. Attack & Defense Simulation**
+   - **Atomic Red Team** – Adversary emulation testing.
+   - **C2 Frameworks** – Cobalt Strike, Sliver, or Mythic for Red Team exercises.
+   - **Windows & Linux Workstations** – For attack testing, phishing simulations, and lateral movement.
+
+## **Implementation Plan**
+
+### **1. Network & Virtual Machine Deployment**
+- Set up **VMware Workstation** on the Razer Blade 15.
+- Create virtual subnets for **internal enterprise, DMZ, and security zones**.
+- Deploy a **Windows Server VM** for **Active Directory**.
+- Deploy a **Linux VM** for **Wazuh SIEM and ELK Stack**.
+
+### **2. Security Monitoring & Logging**
+- Configure **Wazuh SIEM** to collect logs from Windows and Linux machines.
+- Enable **Sysmon and Windows Event Logging** for endpoint monitoring.
+- Integrate **Suricata/Zeek** for network intrusion detection.
+
+### **3. Vulnerability Assessment**
+- Deploy **Nessus/OpenVAS** for internal vulnerability scanning.
+- Conduct Active Directory enumeration with **BloodHound/SharpHound**.
+
+### **4. Attack Simulation & Incident Response**
+- Conduct **phishing simulations** via the SMTP server.
+- Perform **privilege escalation techniques** on the AD server.
+- Execute **lateral movement techniques** to mimic real-world attacks.
+- Use **SIEM and EDR logs** to analyze and respond to threats.
+
+## **Workflow Example: Attack Chain Simulation**
+1. **Initial Access**: Phishing attack via SMTP server.
+2. **Reconnaissance**: Enumerate users and services on the AD server.
+3. **Privilege Escalation**: Exploit misconfigured AD settings.
+4. **Lateral Movement**: Move from Local AI Workstation → Enterprise Workstation.
+5. **Persistence**: Deploy scheduled tasks, registry modifications.
+6. **Exfiltration**: Extract data from Directory Services.
 
 ## Networking
 
