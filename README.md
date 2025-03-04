@@ -16,7 +16,7 @@ This cybersecurity homelab is designed to replicate real-world enterprise networ
 |--------|-------|------|
 | **Beelink Mini PC** | 32GB DDR4 RAM, 1TB SSD | Security Server (SIEM, EDR, Vulnerability Scanner) |
 | **ZimaBlade X86 Single Board Server** | 16GB DDR4 RAM, 1TB SSD | Directory Services / Hypervisor |
-| **Razer Blade 15** | 32GB DDR4 RAM, 1TB SSD | Workstation for attack simulation, lateral movement, and security operations |
+| **Razer Blade 15** | 32GB DDR4 RAM, 1TB SSD | Workstation for attack simulation, lateral movement, and security operations | Running Parrot OS
 | **Synology DS923+ 4-Bay Diskstation NAS** | 16GB DDR4 RAM, 80TB HDD | Storage |
 
 ## **Network Architecture Overview**
@@ -56,11 +56,11 @@ Following the diagram, this homelab includes:
 </table>
 
 ### **1. Hypervisor & Virtualization**
-   - **VMware Workstation** (on Razer Blade 15) – Virtual machine management.
-   - **TrueNAS Scale** (on ZimaBlade) – Storage solution for logs, backups, and VM storage.
+   - **VMware Workstation** (on Zimablade) – Virtual machine management.
+   - **TrueNAS Scale** (on Synology NAS) – Storage solution for logs, backups, and VM storage.
 
 ### **2. Active Directory & Domain Services**
-   - **Windows Server 2022 (Directory Services Server)**
+   - **Ubuntu Server 24 (Directory Services Server)**
    - **Domain Controller, DHCP, DNS, Group Policy Objects (GPO)**.
 
 ### **3. Security Tools & Monitoring**
@@ -75,7 +75,7 @@ Following the diagram, this homelab includes:
    - **BloodHound / SharpHound** – Active Directory attack path analysis.
 
 ### **5. Attack & Defense Simulation**
-   - **Atomic Red Team** – Adversary emulation testing.
+   - **Atomic Red Team** (on Razer Blade running Parrot OS) – Adversary emulation testing.
    - **C2 Frameworks** – Cobalt Strike, Sliver, or Mythic for Red Team exercises.
    - **Windows & Linux Workstations** – For attack testing, phishing simulations, and lateral movement.
 
