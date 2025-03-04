@@ -1,1 +1,1 @@
-# homelab
+# 🏠 Homelab
