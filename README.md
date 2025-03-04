@@ -46,17 +46,15 @@ I am currently testing out a new architecture of single-node clusters where the 
 
 ### Nodes
 
-I use a combination of HP ELITEDESK mini pc's, old laptops and sometimes a few virtual machines. The mini PC's are great because they are small and cheap to buy when you get them refurbished from a reseller.
+I use a combination of mini pc's, and a Zima Blade single board server for my nodes. The mini PC's are great because they are small yet powerful.
 
-HP ELITEDESK 800 G2 MINI i5-6400T/16GB/240GB SSD
+Beelink Mini PC | 32GB DDR4 RAM | 1TB SSD
 
-HP ELITEDESK 800 G2 MINI i3-6100T/8GB/240GB SSD
+Beelink Mini PC | 32GB DDR4 RAM | 1TB SSD
 
-HP ELITEDESK 800 G2 MINI i3-6100T/8GB/240GB SSD
+Zimablade X86 Single Board Server | 16GB DDR4 RAM | 1TB SSD
 
-HP ELITEDESK 800 G2 MINI i3-6100T/8GB/240GB SSD
-
-Lenovo ThinkPad T430 i5 8GB RAM
+Razer Blade 15 | 32GB DDR4 RAM | 1TB SSD
 
 ## :rocket: Installed Apps & Tools
 
