@@ -2,7 +2,7 @@
 ![Project Status](https://img.shields.io/badge/status-in%20development-orange)  
 
 ## **Objective**
-This cybersecurity homelab is designed to replicate real-world enterprise network environments, conduct security testing, and practice threat detection, incident response, and vulnerability management. The architecture follows a typical attack chain, simulating various security scenarios.
+This cybersecurity homelab is designed to replicate real-world enterprise network environments, conduct security testing, and implement AI-driven threat detection, incident response, and vulnerability management. The architecture follows a typical attack chain, simulating various security scenarios while leveraging local AI models for real-time anomaly detection and automated threat analysis.
 
 ## **Hardware Setup**
 
