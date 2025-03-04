@@ -12,12 +12,14 @@ This cybersecurity homelab is designed to replicate real-world enterprise networ
 
 ## **Hardware Setup**
 
-| Device | Specs | Role |
-|--------|-------|------|
-| **Beelink Mini PC** | 32GB DDR4 RAM, 1TB SSD | Security Server (SIEM, EDR, Vulnerability Scanner) |
-| **ZimaBlade X86 Single Board Server** | 16GB DDR4 RAM, 1TB SSD | Directory Services / Hypervisor |
-| **Razer Blade 15** | 32GB DDR4 RAM, 1TB SSD | Workstation for attack simulation and security operations | Running Parrot OS
-| **Synology DS923+ 4-Bay Diskstation NAS** | 16GB DDR4 RAM, 80TB HDD | Storage |
+### **Hardware Utilization Breakdown**
+| **Hardware** | **Role** | **Purpose** |
+|-------------|---------|------------|
+| **Beelink Mini PC (32GB RAM, 1TB SSD)** | **Proxmox VE Host** | Runs VMs for target machines (Windows, Linux, vulnerable hosts). |
+| **ZimaBlade (16GB RAM, 20TB SSD)** | **TrueNAS Scale Storage** | Provides centralized NAS for VM disk storage, backups, and logs. |
+| **Razer Blade 15 (32GB RAM, 1TB SSD, Parrot OS)** | **Attack Machine** | Runs Parrot OS, penetration testing tools, and attack simulations. |
+| **Beelink Mini PC (32GB RAM, 1TB SSD)** | **Security Server** | Hosts Wazuh SIEM, EDR, and vulnerability scanning tools. |
+| **Jetson Nano (4GB RAM, 128GB SSD)** | **AI Workstation** | Clustered with Mini PCs, integrates with all Proxmox-hosted VMs and security server for AI-driven threat detection, automation, and real-time attack analysis. |
 
 ## **Network Architecture Overview**
 Following the diagram, this homelab includes:
