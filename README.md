@@ -89,35 +89,6 @@ End User Applications
     </tr>
 </table>
 
-### Quantified Self
-
-I store data about myself in self-hosted Postgres databases.
-
-A combination of n8n workflows & APIs I coded myself are used.
-
-<table>
-    <tr>
-        <th>Logo</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/converse-light.svg"></td>
-        <td><a href="https://ouraring.com/">Body Metrics</a></td>
-        <td>Storing Oura & other data to Postgres</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/apple-light.svg"</td>
-        <td><a href="https://github.com/mischavandenburg/health-api">Health API</a></td>
-        <td>An API to sync Apple Health data to my personal database</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/mqtt.svg"></td>
-        <td><a href="https://github.com/mischavandenburg/shelly">Home IoT</a></td>
-        <td>Logs MQTT messages from sensors to databases</td>
-    </tr>
-</table>
-
 ### Infrastructure
 
 Everything needed to run my cluster & deploy my applications
