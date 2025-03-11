@@ -150,54 +150,6 @@ This project is released under the MIT License. See the LICENSE file for details
 
 This project utilizes numerous open-source tools and resources from the cybersecurity community. Specific acknowledgments are included in the documentation for each component.
 
-### **Hardware Utilization Breakdown**
-| **Hardware** | **Role** | **Purpose** |
-|-------------|---------|------------|
-| **Beelink Mini PC (32GB RAM, 1TB SSD)** | **Virtual Enviornment Host** | Runs VMs for target machines (Windows, Linux, vulnerable hosts). |
-| **ZimaBlade (16GB RAM, 20TB SSD)** | **NAS Storage** | Provides centralized NAS for VM disk storage, backups, and logs. |
-| **Razer Blade 15 (32GB RAM, 1TB SSD, Parrot OS)** | **Attack Machine** | Runs Parrot OS, penetration testing tools, and attack simulations. |
-| **Beelink Mini PC (32GB RAM, 1TB SSD)** | **Security Server** | Hosts Wazuh SIEM, EDR, and vulnerability scanning tools. |
-| **Jetson Nano (4GB RAM, 128GB SSD)** | **Local AI** | Clustered with Mini PCs, integrates with all Proxmox-hosted VMs and security server for AI-driven threat detection, automation, and real-time attack analysis. |
-
-<table>
-    <tr>
-        <th>Logo</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://imgs.search.brave.com/I3zuH4XrMirJ_2EsXmJpKDjPnk_iNORLotYT0xQgqsA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zZWN1/cml0eS50cnVlbmFz/LmNvbS9pbWFnZXMv/TG9nb1RydWVOQVNT/Y2FsZS5wbmc"></td>
-        <td><a href="https://www.truenas.com/truenas-scale/">TrueNAS Scale</a></td>
-        <td>Hypervisor for centralized storage, VM hosting, and backup management within my homelab infrastructure.</td>
-    </tr>
-</table>
-
-### **Hypervisor & Virtualization**
-   - **VMware Workstation** (on Zimablade) – Virtual machine management.
-   - **TrueNAS Scale** (on Synology NAS) – Storage solution for logs, backups, and VM storage.
-
-### **Active Directory & Domain Services**
-   - **Ubuntu Server 24 (Directory Services Server)**
-   - **Domain Controller, DHCP, DNS, Group Policy Objects (GPO)**.
-
-<table>
-    <tr>
-        <th>Logo</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://www.svgrepo.com/download/499807/home-page.svg"></td>
-        <td><a href="https://github.com/gethomepage/homepage">Homepage</a></td>
-        <td>My customized portal to my homelab & internet</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"></td>
-        <td><a href="https://n8n.io/">n8n</a></td>
-        <td>Secure, AI-native workflow automation</td>
-    </tr>
-</table>
-
 
 [Cilium](https://cilium.io/)
 
