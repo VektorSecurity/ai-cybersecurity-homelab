@@ -1,7 +1,7 @@
 # 🏠 Homelab
 ![Project Status](https://img.shields.io/badge/status-in%20development-orange)  
 
-# AI-Driven Purple Team Cybersecurity Homelab
+# Agentic AI Cybersecurity Homelab
 
 A comprehensive cybersecurity homelab integrating red team and blue team capabilities with modern AI technologies for continuous security testing, monitoring, and improvement.
 
