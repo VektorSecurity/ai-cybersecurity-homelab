@@ -144,7 +144,7 @@ This project demonstrates several valuable skills:
 
 ## 🪪 License
 
-This project is released under the MIT License. See the [LICENSE](https://cilium.io/) file for details.
+This project is released under the MIT License. See the [LICENSE](https://github.com/VektorSecurity/ai-cybersecurity-homelab/blob/a6e89bf7c67ba803bdf2c44fd9acc04b40e567cb/LICENSE) file for details.
 
 ## ⭐ Acknowledgments
 
