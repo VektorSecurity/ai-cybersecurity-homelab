@@ -19,9 +19,9 @@ This homelab demonstrates how open-source AI models can be integrated with tradi
 
 ## 🏗️ Hardware Setup
 
-- **Hypervisor**: Mini PC with AMD Ryzen 5, 32GB DDR4 RAM, 500GB NVME running Proxmox
+- **Hypervisor**: Mini PC with AMD Ryzen 5, 64GB DDR4 RAM, 1TB NVME running Proxmox
 - **Attack Machine**: Razer Blade 15 with Intel i7, 32GB RAM, 1TB NVME running Parrot OS
-- **Storage**: 4TB Sabrent external SATA drive configured as ZFS pool in TrueNAS
+- **Storage**: 20TB Synology NAS configured as ZFS pool in TrueNAS
 
 ## 🌐 Network Architecture
 
