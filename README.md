@@ -1,10 +1,156 @@
 # 🏠 Homelab
 ![Project Status](https://img.shields.io/badge/status-in%20development-orange)  
 
-## **Objective**
-This cybersecurity homelab is designed to replicate real-world enterprise network environments, conduct security testing, and implement AI-driven threat detection, incident response, and vulnerability management. The architecture follows a typical attack chain, simulating various security scenarios while leveraging local AI models for real-time anomaly detection and automated threat analysis.
+# AI-Driven Purple Team Cybersecurity Homelab
 
-## **Hardware Setup**
+A comprehensive cybersecurity homelab integrating red team and blue team capabilities with modern AI technologies for continuous security testing, monitoring, and improvement.
+
+## Overview
+
+This homelab demonstrates how open-source AI models can be integrated with traditional security tools to create a self-improving, automated cybersecurity testing and monitoring environment. The system continuously monitors for threats, analyzes security data, and learns from both attacks and defensive measures.
+
+### Key Features
+
+- **AI-Powered Analysis**: Local AI models for security data analysis without cloud dependencies
+- **Automated Reconnaissance**: AI-driven reconnaissance and vulnerability scanning
+- **Threat Intelligence**: Integrated threat intelligence platform with OpenCTI
+- **Security Monitoring**: Real-time monitoring with Wazuh SIEM
+- **Automation & Orchestration**: Workflow automation with n8n
+- **Attack Simulation**: Automated and semi-automated attack scenarios
+- **Documentation**: Comprehensive documentation and reporting
+
+## Hardware Setup
+
+- **Hypervisor**: Mini PC with AMD Ryzen 5, 32GB DDR4 RAM, 500GB NVME running Proxmox
+- **Attack Machine**: Razer Blade 15 with Intel i7, 32GB RAM, 1TB NVME running Parrot OS
+- **Storage**: 4TB Sabrent external SATA drive configured as ZFS pool in TrueNAS
+
+## Network Architecture
+
+The homelab is segmented into three primary networks:
+- **Management Network** (192.168.0.0/24): For administration and control
+- **Attack Network** (192.168.10.0/24): For red team operations
+- **Defense Network** (192.168.20.0/24): For blue team operations and target systems
+
+## Core Components
+
+### AI Integration
+
+- **Ollama**: Local AI model serving with models like Llama3, Falcon, and Gemma
+- **AI Agent Framework**: Custom Python framework for security-focused AI operations
+- **Multi-Party Computation**: Secure computation for sensitive operations
+
+### Blue Team Components
+
+- **Wazuh SIEM**: Security monitoring, log analysis, and alerting
+- **OpenCTI**: Threat intelligence platform for indicator management and analysis
+- **n8n Blue Team Workflows**: Automated security monitoring and incident response
+
+### Red Team Components
+
+- **Parrot OS Toolkit**: Full suite of security testing tools
+- **n8n Red Team Workflows**: Automated reconnaissance and attack simulation
+- **Shodan Integration**: External reconnaissance and attack surface analysis
+
+### Target Environment
+
+- **Vulnerable Web Server**: Web application testing environment
+- **Vulnerable Database Server**: Database security testing environment
+- **Windows Server**: Active Directory and Windows service testing
+
+## Setup Instructions
+
+The complete setup instructions are available in the `documentation` directory. The system can be quickly deployed using the provided `setup.sh` script:
+
+```bash
+# Clone the repository
+git clone https://github.com/username/cybersec-homelab.git
+cd cybersec-homelab
+
+# Run the setup script with root privileges
+sudo ./setup.sh
+```
+
+The setup script will:
+1. Configure the necessary virtual networks
+2. Deploy the required virtual machines
+3. Install and configure all security tools
+4. Set up the AI integration components
+5. Configure the automation workflows
+6. Generate comprehensive documentation
+
+## Usage
+
+The homelab can be controlled through the central management script:
+
+```bash
+# Check the status of all services
+./homelab.py status
+
+# Start specific services
+./homelab.py start [service|all]
+
+# Run a security scan
+./homelab.py scan --target [target_name]
+
+# Run AI analysis
+./homelab.py ai [blue|red] --input [input_file] --output [output_file]
+
+# Generate documentation
+./homelab.py docs
+
+# Push changes to GitLab
+./homelab.py push
+
+# Run a demonstration scenario
+./homelab.py demo [web-attack|incident-response]
+```
+
+## Demonstration Scenarios
+
+The homelab includes pre-configured demonstration scenarios:
+
+1. **Web Application Attack**: Demonstrates reconnaissance, vulnerability scanning, and exploitation of a web application with AI analysis
+2. **Incident Response**: Simulates an attack, detects it with Wazuh, analyzes it with AI, and demonstrates response procedures
+
+## Documentation
+
+The complete documentation is accessible via the attack machine at `~/homelab/documentation` and includes:
+
+- Architecture diagrams
+- Network configuration details
+- VM specifications
+- Tool configurations
+- AI integration details
+- Security practices
+- Demo walkthroughs
+
+## Learning Resources
+
+This homelab is designed for learning and experimentation. Each component includes detailed explanations and resources for further learning:
+
+- Security tool documentation
+- AI integration guides
+- Attack and defense methodologies
+- Automation best practices
+
+## Portfolio Value
+
+This project demonstrates several valuable skills:
+
+1. **System Architecture Design**: Complex virtualized environment with proper segmentation
+2. **Security Tool Integration**: Integration of diverse security tools into a cohesive system
+3. **AI Implementation**: Practical application of AI for cybersecurity tasks
+4. **Automation**: Security process automation using modern orchestration tools
+5. **Documentation**: Comprehensive technical documentation
+
+## License
+
+This project is released under the MIT License. See the LICENSE file for details.
+
+## Acknowledgments
+
+This project utilizes numerous open-source tools and resources from the cybersecurity community. Specific acknowledgments are included in the documentation for each component.
 
 ### **Hardware Utilization Breakdown**
 | **Hardware** | **Role** | **Purpose** |
@@ -14,20 +160,6 @@ This cybersecurity homelab is designed to replicate real-world enterprise networ
 | **Razer Blade 15 (32GB RAM, 1TB SSD, Parrot OS)** | **Attack Machine** | Runs Parrot OS, penetration testing tools, and attack simulations. |
 | **Beelink Mini PC (32GB RAM, 1TB SSD)** | **Security Server** | Hosts Wazuh SIEM, EDR, and vulnerability scanning tools. |
 | **Jetson Nano (4GB RAM, 128GB SSD)** | **Local AI** | Clustered with Mini PCs, integrates with all Proxmox-hosted VMs and security server for AI-driven threat detection, automation, and real-time attack analysis. |
-
-## **Network Architecture Overview**
-[![Infrastructure.png](https://i.postimg.cc/Qd8hYj2G/Infrastructure.png)](https://postimg.cc/bsB7sfY3)
-
-1. **Email Server (SMTP)** → Entry point for phishing and reconnaissance.
-2. **Hypervisor** → Hosts virtual machines to replicate enterprise systems.
-3. **Directory Services Server** → Represents Active Directory for user authentication, privilege escalation, and persistence testing.
-4. **Security Server** → Centralized security monitoring with SIEM, EDR, and vulnerability scanning.
-5. **Workstations**:
-   - **Local AI Workstation** → Simulates a user machine, attack target.
-   - **Enterprise Workstation** → For lateral movement testing.
-   - **Security Workstation** → For defensive security operations.
-
-## **Software Stack**
 
 <table>
     <tr>
@@ -68,81 +200,6 @@ This cybersecurity homelab is designed to replicate real-world enterprise networ
     </tr>
 </table>
 
-### **Security Tools & Monitoring**
-   - **Wazuh SIEM** (on Beelink Mini PC) – Logs, threat detection, and monitoring.
-   - **Elastic Stack (ELK)** – Visualization and log aggregation.
-   - **Suricata / Zeek** – Network intrusion detection and analysis.
-   - **Sysmon + Windows Event Logging** – Endpoint monitoring.
 
-### **Vulnerability & Exploitation**
-   - **Nessus / OpenVAS** – Vulnerability scanning.
-   - **Metasploit Framework** – Penetration testing and exploitation.
-   - **BloodHound / SharpHound** – Active Directory attack path analysis.
+[Cilium](https://cilium.io/)
 
-<table>
-    <tr>
-        <th>Logo</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://www.svgrepo.com/download/499807/home-page.svg"></td>
-        <td><a href="https://github.com/gethomepage/homepage">Homepage</a></td>
-        <td>My customized portal to my homelab & internet</td>
-    </tr>
-    <tr>
-        <td><img width="32" src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/n8n.svg"></td>
-        <td><a href="https://n8n.io/">n8n</a></td>
-        <td>Secure, AI-native workflow automation</td>
-    </tr>
-</table>
-
-### **Attack & Defense Simulation**
-   - **Atomic Red Team** (on Razer Blade running Parrot OS) – Adversary emulation testing.
-   - **C2 Frameworks** – Cobalt Strike, Sliver, or Mythic for Red Team exercises.
-   - **Windows & Linux Workstations** – For attack testing, phishing simulations, and lateral movement.
-
-## **Implementation Plan**
-
-### **1. Network & Virtual Machine Deployment**
-- Set up **VMware Workstation** on the Zimablade.
-- Create virtual subnets for **internal enterprise, DMZ, and security zones**.
-- Deploy a **Ubuntu Server VM** for **Active Directory**.
-- Deploy a **Linux TalosOS VM** for **Wazuh SIEM and ELK Stack**.
-
-### **2. Security Monitoring & Logging**
-- Configure **Wazuh SIEM** to collect logs from Windows and Linux machines.
-- Enable **Sysmon and Windows Event Logging** for endpoint monitoring.
-- Integrate **Suricata/Zeek** for network intrusion detection.
-
-### **3. Vulnerability Assessment**
-- Deploy **Nessus/OpenVAS** for internal vulnerability scanning.
-- Conduct Active Directory enumeration with **BloodHound/SharpHound**.
-
-### **4. Attack Simulation & Incident Response**
-- Conduct **phishing simulations** via the SMTP server.
-- Perform **privilege escalation techniques** on the AD server.
-- Execute **lateral movement techniques** to mimic real-world attacks.
-- Use **SIEM and EDR logs** to analyze and respond to threats.
-
-## **Workflow Example: Attack Chain Simulation**
-1. **Initial Access**: Phishing attack via SMTP server.
-2. **Reconnaissance**: Enumerate users and services on the AD server.
-3. **Privilege Escalation**: Exploit misconfigured AD settings.
-4. **Lateral Movement**: Move from Local AI Workstation → Enterprise Workstation.
-5. **Persistence**: Deploy scheduled tasks, registry modifications.
-6. **Exfiltration**: Extract data from Directory Services.
-
-## Networking
-
-I use a Unifi Express Router, configured with 7 different VLANs which are all locked down by strict traffic rules.
-
-I use [Cilium](https://cilium.io/) as my CNI. I use LoadBalancer IPAM to assign IP addresses to my LoadBalancer services and use Cilium as an ingress controller. This way, I don't need to install and maintain a seperate ingress controller like Traefik, which I used in the past.
-
-### Storage
-
-I use a Synology DS224+ as a NAS. I use the Synology CSI driver to provision Persistent Volumes from my clusters directly on the NAS. I also have an NFS share for data that needs to be shared between clusters.
-
-## Secret Management
-
-Azure Key Vaults are used to store my secrets. I sync them to my cluster using the External Secrets Operator.
