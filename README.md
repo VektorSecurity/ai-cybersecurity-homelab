@@ -3,11 +3,11 @@
 
 A comprehensive cybersecurity homelab integrating red team and blue team capabilities with modern AI technologies for continuous security testing, monitoring, and improvement.
 
-## Overview
+## 💻 Overview
 
 This homelab demonstrates how open-source AI models can be integrated with traditional security tools to create a self-improving, automated cybersecurity testing and monitoring environment. The system continuously monitors for threats, analyzes security data, and learns from both attacks and defensive measures.
 
-### Key Features
+### 💼 Key Features
 
 - **AI-Powered Analysis**: Local AI models for security data analysis without cloud dependencies
 - **Automated Reconnaissance**: AI-driven reconnaissance and vulnerability scanning
@@ -17,46 +17,46 @@ This homelab demonstrates how open-source AI models can be integrated with tradi
 - **Attack Simulation**: Automated and semi-automated attack scenarios
 - **Documentation**: Comprehensive documentation and reporting
 
-## Hardware Setup
+## 🏗️ Hardware Setup
 
 - **Hypervisor**: Mini PC with AMD Ryzen 5, 32GB DDR4 RAM, 500GB NVME running Proxmox
 - **Attack Machine**: Razer Blade 15 with Intel i7, 32GB RAM, 1TB NVME running Parrot OS
 - **Storage**: 4TB Sabrent external SATA drive configured as ZFS pool in TrueNAS
 
-## Network Architecture
+## 🌐 Network Architecture
 
 The homelab is segmented into three primary networks:
 - **Management Network** (192.168.0.0/24): For administration and control
 - **Attack Network** (192.168.10.0/24): For red team operations
 - **Defense Network** (192.168.20.0/24): For blue team operations and target systems
 
-## Core Components
+## 🔗 Core Components
 
-### AI Integration
+### 🤖 AI Integration
 
 - **Ollama**: Local AI model serving with models like Llama3, Falcon, and Gemma
 - **AI Agent Framework**: Custom Python framework for security-focused AI operations
 - **Multi-Party Computation**: Secure computation for sensitive operations
 
-### Blue Team Components
+### 💙 Blue Team Components
 
 - **Wazuh SIEM**: Security monitoring, log analysis, and alerting
 - **OpenCTI**: Threat intelligence platform for indicator management and analysis
 - **n8n Blue Team Workflows**: Automated security monitoring and incident response
 
-### Red Team Components
+### 👾 Red Team Components
 
 - **Parrot OS Toolkit**: Full suite of security testing tools
 - **n8n Red Team Workflows**: Automated reconnaissance and attack simulation
 - **Shodan Integration**: External reconnaissance and attack surface analysis
 
-### Target Environment
+### 🎯 Target Environment
 
 - **Vulnerable Web Server**: Web application testing environment
 - **Vulnerable Database Server**: Database security testing environment
 - **Windows Server**: Active Directory and Windows service testing
 
-## Setup Instructions
+## 📝 Setup Instructions
 
 The complete setup instructions are available in the `documentation` directory. The system can be quickly deployed using the provided `setup.sh` script:
 
@@ -77,7 +77,7 @@ The setup script will:
 5. Configure the automation workflows
 6. Generate comprehensive documentation
 
-## Usage
+## 📜 Usage
 
 The homelab can be controlled through the central management script:
 
@@ -104,14 +104,14 @@ The homelab can be controlled through the central management script:
 ./homelab.py demo [web-attack|incident-response]
 ```
 
-## Demonstration Scenarios
+## 🧭 Demonstration Scenarios
 
 The homelab includes pre-configured demonstration scenarios:
 
 1. **Web Application Attack**: Demonstrates reconnaissance, vulnerability scanning, and exploitation of a web application with AI analysis
 2. **Incident Response**: Simulates an attack, detects it with Wazuh, analyzes it with AI, and demonstrates response procedures
 
-## Documentation
+## 📜 Documentation
 
 The complete documentation is accessible via the attack machine at `~/homelab/documentation` and includes:
 
@@ -123,7 +123,7 @@ The complete documentation is accessible via the attack machine at `~/homelab/do
 - Security practices
 - Demo walkthroughs
 
-## Learning Resources
+## 🏫 Learning Resources
 
 This homelab is designed for learning and experimentation. Each component includes detailed explanations and resources for further learning:
 
@@ -132,7 +132,7 @@ This homelab is designed for learning and experimentation. Each component includ
 - Attack and defense methodologies
 - Automation best practices
 
-## Portfolio Value
+## 📈 Portfolio Value
 
 This project demonstrates several valuable skills:
 
@@ -142,11 +142,11 @@ This project demonstrates several valuable skills:
 4. **Automation**: Security process automation using modern orchestration tools
 5. **Documentation**: Comprehensive technical documentation
 
-## License
+## 🪪 License
 
 This project is released under the MIT License. See the LICENSE file for details.
 
-## Acknowledgments
+## ⭐ Acknowledgments
 
 This project utilizes numerous open-source tools and resources from the cybersecurity community. Specific acknowledgments are included in the documentation for each component.
 
