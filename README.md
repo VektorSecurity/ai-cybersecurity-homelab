@@ -144,12 +144,8 @@ This project demonstrates several valuable skills:
 
 ## 🪪 License
 
-This project is released under the MIT License. See the LICENSE file for details.
+This project is released under the MIT License. See the [LICENSE](https://cilium.io/) file for details.
 
 ## ⭐ Acknowledgments
 
 This project utilizes numerous open-source tools and resources from the cybersecurity community. Specific acknowledgments are included in the documentation for each component.
-
-
-[Cilium](https://cilium.io/)
-
