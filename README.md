@@ -1,4 +1,4 @@
-# 🏠 Agentic AI Cybersecurity Homelab
+# 🏠 AI Cybersecurity Homelab
 ![Project Status](https://img.shields.io/badge/status-in%20development-orange)  
 
 A comprehensive cybersecurity homelab integrating red team and blue team capabilities with modern AI technologies for continuous security testing, monitoring, and improvement.
@@ -62,8 +62,8 @@ The complete setup instructions are available in the `documentation` directory. 
 
 ```bash
 # Clone the repository
-git clone https://github.com/username/cybersec-homelab.git
-cd cybersec-homelab
+git clone https://github.com/username/ai-cybersecurity-homelab.git
+cd ai-cybersecurity-homelab
 
 # Run the setup script with root privileges
 sudo ./setup.sh
